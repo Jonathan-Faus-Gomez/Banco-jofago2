@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Banco-jofago</string>
+    <string name="titulo">Log in</string>
+    <string name="usuario">Enter the user</string>
+    <string name="required">Required</string>
+    <string name="password">Enter the password</string>
+    <string name="entrar">LOGIN</string>
+    <string name="salir">LOGOUT</string>
+    <string name="posicion">GLOBAL POSITION</string>
+    <string name="movimientos">MOVEMENTS</string>
+    <string name="cambio_password">CHANGE PASSWORD</string>
+    <string name="promociones">PROMOTIONS</string>
+    <string name="cajeros">ATMs</string>
+    <string name="transferencias">TRANSFERS</string>
+    <string name="password2">Re-enter the password</string>
+    <string name="enviar">SEND</string>
+    <string name="bienvenido">Welcome</string>
+    <string name="transferencia">Transfers</string>
+    <string name="propia">Own account</string>
+    <string name="ajena">Third-party account</string>
+    <string name="cancelar">CANCEL</string>
+    <string name="cantidad">Amount:</string>
+    <string name="cuentas">Accounts</string>
+    <string name="seleccion">"Select the account: "</string>
+    <string name="ultimos">Last movements:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

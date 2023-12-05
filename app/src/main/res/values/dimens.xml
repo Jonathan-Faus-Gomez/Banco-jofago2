@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_img_size">88dp</dimen>
+    <dimen name="margin_top_button">15dp</dimen>
+    <dimen name="margin_button">5dp</dimen>
+    <dimen name="padding_button">25dp</dimen>
+    <dimen name="text_size_button">20sp</dimen>
+    <dimen name="card">10dp</dimen>
+</resources>

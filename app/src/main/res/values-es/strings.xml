@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Banco-jofago</string>
+    <string name="titulo">Iniciar sesión</string>
+    <string name="usuario">Introduce el usuario</string>
+    <string name="required">Obligatorio</string>
+    <string name="password">Introduce la contraseña</string>
+    <string name="entrar">ENTRAR</string>
+    <string name="salir">SALIR</string>
+    <string name="posicion">POSICIÓN GLOBAL</string>
+    <string name="movimientos">MOVIMIENTOS</string>
+    <string name="cambio_password">CAMBIAR CONTRASEÑA</string>
+    <string name="promociones">PROMOCIONES</string>
+    <string name="cajeros">CAJEROS</string>
+    <string name="transferencias">TRANSFERENCIAS</string>
+    <string name="password2">Vuelve a introducir la contraseña</string>
+    <string name="enviar">ENVIAR</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="transferencia">Transferencias</string>
+    <string name="propia">Cuenta propia</string>
+    <string name="ajena">Cuenta ajena</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="cantidad">Cantidad:</string>
+    <string name="cuentas">Cuentas</string>
+    <string name="seleccion">"Selecciona la cuenta: "</string>
+    <string name="ultimos">Últimos movimientos:</string>
+</resources>

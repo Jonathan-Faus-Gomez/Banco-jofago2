@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/bienvenida"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="20dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="@dimen/card_img_size"
+                    android:layout_height="@dimen/card_img_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/avatar"
+                    />
+                <TextView
+                    android:id="@+id/bienvenido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30dp"
+                    app:layout_constraintStart_toEndOf="@+id/avatar"
+                    app:layout_constraintTop_toTopOf="parent"
+
+
+
+
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/barra">
+            >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                tools:ignore="MissingConstraints">
+
+
+                <TableRow>
+                    <Button
+                        android:id="@+id/posicion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/posicion"
+
+                        android:background="@drawable/square_button_background"
+                        android:layout_margin="@dimen/margin_button"
+                        android:textSize="@dimen/text_size_button"
+                        android:padding="@dimen/padding_button"
+
+                        />
+
+
+                    <Button
+                        android:id="@+id/movimientos"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/movimientos"
+                        android:background="@drawable/square_button_background"
+                        android:layout_margin="@dimen/margin_button"
+                        android:textSize="@dimen/text_size_button"
+                        android:padding="@dimen/padding_button"
+                        />
+                </TableRow>
+
+                <TableRow>
+                    <Button
+                        android:id="@+id/transferencias"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/transferencias"
+                        android:background="@drawable/square_button_background"
+                        android:layout_margin="@dimen/margin_button"
+                        android:textSize="@dimen/text_size_button"
+                        android:padding="@dimen/padding_button"
+                        />
+
+                    <Button
+                        android:id="@+id/cambiar_password"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/cambio_password"
+                        android:background="@drawable/square_button_background"
+                        android:layout_margin="@dimen/margin_button"
+                        android:textSize="@dimen/text_size_button"
+                        android:padding="@dimen/padding_button"
+                        />
+                </TableRow>
+
+                <TableRow>
+                    <Button
+                        android:id="@+id/promociones"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/promociones"
+                        android:background="@drawable/square_button_background"
+                        android:layout_margin="@dimen/margin_button"
+                        android:textSize="@dimen/text_size_button"
+                        android:padding="@dimen/padding_button"
+                        />
+
+                    <Button
+                        android:id="@+id/cajeros"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/cajeros"
+                        android:background="@drawable/square_button_background"
+                        android:layout_margin="@dimen/margin_button"
+                        android:textSize="@dimen/text_size_button"
+                        android:padding="@dimen/padding_button"
+                        />
+                </TableRow>
+
+                <TableRow>
+                    <Button
+                        android:id="@+id/salir"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/salir"
+                        android:background="@drawable/square_button_background"
+
+                        android:textSize="@dimen/text_size_button"
+                        android:padding="@dimen/padding_button"
+                        android:layout_marginBottom="70dp"
+                        android:layout_marginHorizontal="@dimen/margin_button"
+                        />
+                </TableRow>
+            </TableLayout>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/barra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:navigationIcon="@drawable/icono_menu"
+            style="@style/Widget.MaterialComponents.BottomAppBar.Colored" />
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icono_banco"
+            app:layout_anchor="@id/barra"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
