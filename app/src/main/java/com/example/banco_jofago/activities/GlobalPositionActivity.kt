@@ -33,7 +33,7 @@ class GlobalPositionActivity : AppCompatActivity() , CuentasListener {
         val cliente = intent.getSerializableExtra("Cliente") as Cliente
         //val cuentas = mbo?.getCuentas(cliente)as ArrayList<Cuenta>
 
-        val fragmentCuenta: CuentasFragment = CuentasFragment.newInstance(cliente as Cliente)
+        val fragmentCuenta: CuentasFragment = CuentasFragment.newInstance(cliente)
 
         supportFragmentManager.beginTransaction().add(R.id.frgCuentas,fragmentCuenta).commit()
 
@@ -60,6 +60,7 @@ class GlobalPositionActivity : AppCompatActivity() , CuentasListener {
             }
         }
     }
+    //OnMovimientoSeleccionado -> tablet
 
 
 }

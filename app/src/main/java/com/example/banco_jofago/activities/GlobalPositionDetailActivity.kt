@@ -31,4 +31,5 @@ class GlobalPositionDetailActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().add(R.id.frgMovements,fragmentCuentasMovements).commit()
 
     }
+    //onMovimientoSeleccionado ->movil
 }

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.banco_jofago.databinding.ItemMovementBinding
 import com.example.banco_jofago.pojo.Movimiento
-
+//poner click listener
 class MovimientoAdapter(private val movimientosList: ArrayList<Movimiento>) :
     RecyclerView.Adapter<MovimientoAdapter.MovementViewHolder>() {
 
@@ -34,3 +34,4 @@ class MovimientoAdapter(private val movimientosList: ArrayList<Movimiento>) :
         }
     }
 }
+
