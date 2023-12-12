@@ -44,9 +44,9 @@ class GlobalPositionActivity : AppCompatActivity() , CuentasListener {
 
     override fun onCuentaSeleccionada(cuenta: Cuenta) {
         if (cuenta != null) {
-            var hayDetalle = binding.frgCuentas?.let { supportFragmentManager.findFragmentById(it.id) } != null
+            var hayMovimientos = binding.frgCuentas?.let { supportFragmentManager.findFragmentById(it.id) } != null
 
-            if(hayDetalle){//Se muestra el contenido en la misma Activity
+            if(resources.configuration.screenLayout == 268435796){//Se muestra el contenido en la misma Activity
 
                 val cuentasFragment = CuentasFragment()
                 val transaction = supportFragmentManager.beginTransaction()

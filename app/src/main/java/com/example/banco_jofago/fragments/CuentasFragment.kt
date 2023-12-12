@@ -47,13 +47,10 @@ class CuentasFragment : Fragment(), OnClickListener {
 
         val listaCuentas: ArrayList<Cuenta> =
             mbo?.getCuentas(cliente as Cliente?) as ArrayList<Cuenta>
-        val cuenta = Cuenta(12,"Santander","Nose","C/ juan","ES375893051785012",cliente,20f)
-
-        listaCuentas.add(cuenta)
 
 
 
-        cuentaAdapter = CuentasAdapter(listaCuentas)
+        cuentaAdapter = CuentasAdapter(listaCuentas,this)
         linearLayoutManager = LinearLayoutManager(context)
         itemDecoration = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
 

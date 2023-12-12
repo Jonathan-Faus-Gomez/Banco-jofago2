@@ -36,7 +36,7 @@ class LoginActivity : AppCompatActivity(){
                     Toast.makeText(this, "ERROR: No se ha podido iniciar sesión", Toast.LENGTH_LONG).show()
                 }else{
                     val intent = Intent(this, MainActivity::class.java )
-                    intent.putExtra("Cliente",cliente)
+                    intent.putExtra("Cliente",resultado)
                     startActivity(intent)
                 }
 
