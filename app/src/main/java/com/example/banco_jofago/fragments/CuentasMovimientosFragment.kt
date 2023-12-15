@@ -20,6 +20,8 @@ private const val ARG_CUENTA = "cuenta"
 class CuentasMovimientosFragment : Fragment() {
     private lateinit var cuenta: Cuenta
 
+
+    private lateinit var listener: MovimientosListener
     private lateinit var movimientoAdapter: MovimientoAdapter
     private lateinit var linearLayoutManager : LinearLayoutManager
     private lateinit var itemDecoration: DividerItemDecoration
@@ -50,6 +52,11 @@ class CuentasMovimientosFragment : Fragment() {
         linearLayoutManager = LinearLayoutManager(context)
         itemDecoration = DividerItemDecoration(context,DividerItemDecoration.VERTICAL)
     }
+
+    fun setListener(listener: MovimientosListener){
+        this.listener = listener
+    }
+
     companion object {
         @JvmStatic
         fun newInstance(cu: Cuenta) =
