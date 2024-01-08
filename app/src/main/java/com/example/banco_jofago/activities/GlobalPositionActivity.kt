@@ -1,8 +1,11 @@
 package com.example.banco_jofago.activities
 
 import CuentasAdapter
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -16,6 +19,9 @@ import com.example.banco_jofago.fragments.CuentasListener
 import com.example.banco_jofago.fragments.CuentasMovimientosFragment
 import com.example.banco_jofago.pojo.Cliente
 import com.example.banco_jofago.pojo.Cuenta
+import com.example.banco_jofago.pojo.Movimiento
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import java.text.SimpleDateFormat
 
 class GlobalPositionActivity : AppCompatActivity() , CuentasListener {
     private lateinit var binding: ActivityGlobalPositionBinding
@@ -60,7 +66,9 @@ class GlobalPositionActivity : AppCompatActivity() , CuentasListener {
             }
         }
     }
-    //OnMovimientoSeleccionado -> tablet
+    override fun onMovimientoSeleccionado(movimiento: Movimiento) {
+        /**/
+    }
 
 
 }

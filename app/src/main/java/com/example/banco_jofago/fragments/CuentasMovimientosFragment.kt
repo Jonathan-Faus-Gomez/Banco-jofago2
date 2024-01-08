@@ -12,6 +12,7 @@ import com.example.banco_jofago.R
 import com.example.banco_jofago.adapters.MovimientoAdapter
 import com.example.banco_jofago.bd.MiBancoOperacional
 import com.example.banco_jofago.databinding.FragmentCuentasBinding
+import com.example.banco_jofago.adapters.OnClickListenerMovimiento
 import com.example.banco_jofago.databinding.FragmentCuentasMovimientosBinding
 import com.example.banco_jofago.pojo.Cuenta
 import com.example.banco_jofago.pojo.Movimiento
@@ -66,4 +67,11 @@ class CuentasMovimientosFragment : Fragment() {
                 }
             }
     }
+    override fun onClick(movimiento: Movimiento) {
+
+        if (listener != null) {
+            listener.onMovimientoSeleccionado(movimiento)
+        }
+    }
+
 }

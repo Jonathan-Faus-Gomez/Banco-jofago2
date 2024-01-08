@@ -1,7 +1,9 @@
 package com.example.banco_jofago.activities
 
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.banco_jofago.R
 import com.example.banco_jofago.adapters.MovimientoAdapter
@@ -13,6 +15,8 @@ import com.example.banco_jofago.fragments.CuentasMovimientosFragment
 import com.example.banco_jofago.pojo.Cliente
 import com.example.banco_jofago.pojo.Cuenta
 import com.example.banco_jofago.pojo.Movimiento
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import java.text.SimpleDateFormat
 
 class GlobalPositionDetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityGlobalPositionDetailBinding
@@ -32,4 +36,7 @@ class GlobalPositionDetailActivity : AppCompatActivity() {
 
     }
     //onMovimientoSeleccionado ->movil
+    override fun onMovimientoSeleccionado(movimiento: Movimiento) {
+        /**/
+    }
 }
