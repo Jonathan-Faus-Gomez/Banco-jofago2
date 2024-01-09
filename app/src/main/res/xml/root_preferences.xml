@@ -1,0 +1,61 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory
+        android:title="Idioma"
+        android:icon="@android:drawable/ic_menu_preferences">
+
+        <ListPreference
+            android:key="language"
+            android:title="Lenguaje de la aplicación"
+            android:summary="Selecciona el idioma"
+            android:dialogTitle="Selecciona el idioma"
+            android:defaultValue="es"
+            android:entries="@array/languages_entries"
+            android:entryValues="@array/languages_values" />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="Origen de datos"
+        android:icon="@android:drawable/ic_menu_preferences">
+
+
+        <ListPreference
+            android:key="data_source"
+            android:title="Origen de datos"
+            android:summary="Selecciona el origen de datos"
+            android:dialogTitle="Selecciona el origen de datos"
+            android:defaultValue="local_database"
+            android:entries="@array/data_sources_entries"
+            android:entryValues="@array/data_sources_values" />
+    </PreferenceCategory>
+
+
+    <SwitchPreferenceCompat
+        android:key="music"
+        android:title="Música"
+        android:summary="Reproducir música existente en la aplicación"
+        android:defaultValue="true" />
+
+
+    <SwitchPreferenceCompat
+        android:key="welcome_video"
+        android:title="Video de bienvenida"
+        android:summary="Reproducir video de bienvenida a la aplicación"
+        android:defaultValue="true" />
+
+    <PreferenceCategory
+        android:title="Volumen de notificaciones"
+        android:icon="@android:drawable/ic_menu_preferences">
+
+        <SeekBarPreference
+            android:key="notification_volume"
+            android:title="Volumen"
+            android:summary="Ajusta el volumen de las notificaciones"
+            android:showSeekBarValue="true"
+            android:defaultValue="50" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
