@@ -17,13 +17,14 @@ import com.example.banco_jofago.databinding.ActivityGlobalPositionBinding
 import com.example.banco_jofago.fragments.CuentasFragment
 import com.example.banco_jofago.fragments.CuentasListener
 import com.example.banco_jofago.fragments.CuentasMovimientosFragment
+import com.example.banco_jofago.fragments.MovimientosListener
 import com.example.banco_jofago.pojo.Cliente
 import com.example.banco_jofago.pojo.Cuenta
 import com.example.banco_jofago.pojo.Movimiento
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.text.SimpleDateFormat
 
-class GlobalPositionActivity : AppCompatActivity() , CuentasListener {
+class GlobalPositionActivity : AppCompatActivity() , CuentasListener , MovimientosListener {
     private lateinit var binding: ActivityGlobalPositionBinding
 
     //private lateinit var movimientoAdapter: MovimientoAdapter
@@ -50,7 +51,7 @@ class GlobalPositionActivity : AppCompatActivity() , CuentasListener {
 
     override fun onCuentaSeleccionada(cuenta: Cuenta) {
         if (cuenta != null) {
-            var hayMovimientos = binding.frgCuentas?.let { supportFragmentManager.findFragmentById(it.id) } != null
+            //var hayMovimientos = binding.frgCuentas?.let { supportFragmentManager.findFragmentById(it.id) } != null OTRA OPCION -> depende de la version puede fallar
 
             if(resources.configuration.screenLayout == 268435796){//Se muestra el contenido en la misma Activity
 
@@ -67,7 +68,24 @@ class GlobalPositionActivity : AppCompatActivity() , CuentasListener {
         }
     }
     override fun onMovimientoSeleccionado(movimiento: Movimiento) {
-        /**/
+        Log.i("Global Position", movimiento.getDescripcion().toString())
+        val vistaDialogo = layoutInflater.inflate(R.layout.dialogo_movimiento, null)
+
+
+
+        val textoDialogo = vistaDialogo.findViewById<TextView>(R.id.textoDialogo)
+        textoDialogo.text = "Id: ${movimiento.getId()} \n" +
+                "Descripcion: ${movimiento.getDescripcion()} \n" +
+                "Fecha: ${movimiento.getFechaOperacion()}"
+
+
+        MaterialAlertDialogBuilder(this)
+            .setView(vistaDialogo)
+            .setPositiveButton("Aceptar", DialogInterface.OnClickListener { dialog, i ->
+                dialog.cancel()
+            })
+            .setCancelable(false)
+            .show()
     }
 
 

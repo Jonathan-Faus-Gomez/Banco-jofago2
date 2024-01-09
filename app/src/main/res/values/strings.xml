@@ -25,4 +25,9 @@
     <string name="ultimos">Last movements:</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="detalle_movimiento_dialogo">Detalle del movimiento</string>
+    <string name="navegacion_todo">Todo</string>
+    <string name="navegacion_0">Tipo 0</string>
+    <string name="navegacion_1">Tipo 1</string>
+    <string name="navegacion_2">Tipo 2</string>
 </resources>

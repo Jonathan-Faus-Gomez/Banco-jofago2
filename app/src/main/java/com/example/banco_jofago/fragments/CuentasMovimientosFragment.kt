@@ -16,9 +16,9 @@ import com.example.banco_jofago.adapters.OnClickListenerMovimiento
 import com.example.banco_jofago.databinding.FragmentCuentasMovimientosBinding
 import com.example.banco_jofago.pojo.Cuenta
 import com.example.banco_jofago.pojo.Movimiento
-
+private const val ARG_TIPO = "tipo"
 private const val ARG_CUENTA = "cuenta"
-class CuentasMovimientosFragment : Fragment() {
+class CuentasMovimientosFragment : Fragment(), OnClickListenerMovimiento {
     private lateinit var cuenta: Cuenta
 
 
@@ -59,13 +59,21 @@ class CuentasMovimientosFragment : Fragment() {
     }
 
     companion object {
-        @JvmStatic
-        fun newInstance(cu: Cuenta) =
+        fun newInstance(cuenta: Cuenta, tipo: Int) =
             CuentasMovimientosFragment().apply {
                 arguments = Bundle().apply {
-                    putSerializable(ARG_CUENTA, cu)
+                    putSerializable(ARG_CUENTA, cuenta)
+                    putSerializable(ARG_TIPO, tipo)
                 }
             }
+
+        fun newInstance(cuenta: Cuenta) =
+            CuentasMovimientosFragment().apply {
+                arguments = Bundle().apply {
+                    putSerializable(ARG_CUENTA, cuenta)
+                }
+            }
+
     }
     override fun onClick(movimiento: Movimiento) {
 
