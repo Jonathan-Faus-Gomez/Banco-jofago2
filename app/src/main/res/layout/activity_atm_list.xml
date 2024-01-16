@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AtmListActivity">
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        tools:ignore="BottomAppBar" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+
+            />
+    </com.google.android.material.bottomappbar.BottomAppBar>
+    <TextView
+        android:gravity="center"
+        android:id="@+id/atm_list"
+        android:layout_margin="20dp"
+        android:textSize="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        android:text="ATM List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/select_atm"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/atm_list"
+        android:textSize="20dp"
+        android:text="Select ATM:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/select_atm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
