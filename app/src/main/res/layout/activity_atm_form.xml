@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.AtmFormActivity">
-
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottombarapp"
         android:layout_width="match_parent"
@@ -74,4 +73,26 @@
         app:layout_constraintTop_toBottomOf="@+id/text_view_length"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/length"
+        android:layout_margin="20dp"
+        android:text="SAVE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cancel"
+        />
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="20dp"
+        android:text="CANCEL"
+        app:layout_constraintTop_toBottomOf="@id/length"
+        app:layout_constraintStart_toEndOf="@id/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

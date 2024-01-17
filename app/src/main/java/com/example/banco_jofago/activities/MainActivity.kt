@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         binding.bienvenido.text = cliente.getNombre()
 
 
+
         binding.cambiarPassword.setOnClickListener{
             val intent = Intent(this, CambiarPasswordActivity::class.java )
             intent.putExtra("Cliente",cliente)
